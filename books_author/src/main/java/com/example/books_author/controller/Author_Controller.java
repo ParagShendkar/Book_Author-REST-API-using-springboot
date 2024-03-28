@@ -29,6 +29,11 @@ public class Author_Controller {
         return  authorService.findAllAuthors(author);
     }
 
+    @PutMapping("author/update/{id}")
+    public Author updateAuthorById(@PathVariable int id,@RequestBody Author author){
+        return authorService.updateAuthorById(id,author);
+    }
+
     @DeleteMapping("author/delete/{id}")
     public void deleteAuthor(@PathVariable int id){
         authorService.deleteAuthor(id);
