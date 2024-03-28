@@ -30,8 +30,8 @@ public class Book_Service {
         bookDao.deleteBook(id);
     }
 
-    public void updateBookById(long id,Books books){
-        bookDao.updateBookById(id,books);
+    public Books updateBookById(long id, Books books){
+        return bookDao.updateBookById(id,books);
     }
 
     public Books findBooksByTitle(String title){
