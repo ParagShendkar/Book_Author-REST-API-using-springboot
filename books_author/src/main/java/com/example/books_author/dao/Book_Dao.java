@@ -32,9 +32,9 @@ public class Book_Dao {
         bookRepository.deleteById(id);
     }
 
-    public void updateBookById(long id,Books books){
+    public Books updateBookById(long id, Books books){
         books.setId(id);
-        bookRepository.save(books);
+       return bookRepository.save(books);
     }
 
     public Books findBooksByTitle(String title){
