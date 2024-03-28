@@ -35,6 +35,11 @@ public class Book_Controller {
         return "Book Delete successfully";
     }
 
+    @PutMapping("book/update/{id}")
+    public Books updateBooks(@PathVariable long id, @RequestBody Books books){
+        return bookService.updateBookById(id,books);
+    }
+
     @GetMapping("books/findBooksByTitle/{title}")
     public Books findBookByTitle(@PathVariable String title){
         return bookService.findBooksByTitle(title);
