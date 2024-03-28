@@ -37,4 +37,8 @@ public class Author_Service {
     public Author findAuthorByName(String name){
         return authorDao.findAuthorByName(name);
     }
+
+    public Author updateAuthorById(int id, Author author) {
+        return authorDao.updateAuthorById(id, author);
+    }
 }
