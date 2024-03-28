@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.OptionalInt;
 
 @Repository
 public class Author_Dao {
@@ -32,9 +31,9 @@ public class Author_Dao {
         authorRepository.deleteById(id);
     }
 
-    public void updateAuthorById(int id,Author author){
+    public Author updateAuthorById(int id, Author author){
         author.setAuthor_id(id);
-        authorRepository.save(author);
+        return authorRepository.save(author);
     }
 
     public Author findAuthorByName(String name){
